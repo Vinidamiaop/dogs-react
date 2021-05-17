@@ -10,6 +10,10 @@ const types = {
     regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
     message: "A senha não é forte",
   },
+  number: {
+    regex: /^\d+$/,
+    message: "Utilize números apenas",
+  },
 };
 
 const useForm = (type) => {
