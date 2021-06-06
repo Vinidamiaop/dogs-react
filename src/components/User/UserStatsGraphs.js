@@ -14,11 +14,13 @@ const UserStatsGraphs = ({ data }) => {
       };
     });
 
-    setTotal(
-      data
-        .map(({ acessos }) => Number(acessos))
-        .reduce((acc, item) => acc + item)
-    );
+    if (data.length > 0) {
+      setTotal(
+        data
+          ?.map(({ acessos }) => Number(acessos))
+          .reduce((acc, item) => acc + item)
+      );
+    }
 
     setGraph(graphData);
   }, [data]);
